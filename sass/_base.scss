@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+  }
+  
+  .divisor {
+    display: none;
+  }
+
+  .beon-container {
+    border: none;
+  }
+
+  .tns-outer {
+    max-width: 1147px;
+    margin: 0 auto;
+  }
+  
+  .beon-slider__frame {
+    max-width: 1250px;
+  }
+
+  @media (max-width: 480px) {
+    .beon-container {
+      overflow-x: hidden;
+      overflow-y: hidden;
+      max-height: 100vh;
+    }
+  
+    .beon-interaction {
+      margin: 0;
+      padding: 0;
+    }
+  
+    .beon-showcase .beon-slider__frame {
+      display: flex;
+      margin-top: 59px;
+    }
+}

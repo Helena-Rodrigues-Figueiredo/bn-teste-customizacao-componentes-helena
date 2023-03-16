@@ -1,0 +1,57 @@
+@use './variables' as variables;
+@use './mixins' as mixins;
+
+.beon-showcase {
+  .beon-showcase__head {
+    width: 1147px;
+    margin: 51px auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      border: 1px solid variables.$primary-color;
+      width: 1147px;
+      top: 68px;
+      left: 1px;
+    }
+  }
+}
+
+.beon-showcase__head-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.beon-showcase__title span,
+.beon-showcase__viewmore span {
+  color: variables.$primary-color;
+  @include mixins.default-font(700, 16px, 20px);
+}
+
+.beon-showcase__viewmore span {
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .beon-showcase {
+    .beon-showcase__head {
+      max-width: 100%;
+      margin: 0;
+
+      &::before {
+        width: 336px;
+        top: 77px;
+        left: 17px;
+      }
+    }
+  }
+  .beon-showcase__head-inner {
+    flex-direction: column;
+    top: 20px;
+  }
+
+  .beon-showcase__viewmore span {
+    display: none;
+  }
+}

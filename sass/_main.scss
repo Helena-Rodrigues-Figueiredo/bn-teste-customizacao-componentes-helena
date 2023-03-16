@@ -1,0 +1,144 @@
+@use './variables' as variables;
+@use './mixins' as mixins;
+
+.beon-showcase__item {
+  border: 1px solid variables.$secondary-color;
+  border-radius: 10px;
+  height: 520px;
+  width: 260px;
+  margin-right: 35px;
+
+  &:hover {
+    border: 1px solid variables.$primary-color;
+    cursor: pointer;
+
+    .beon-button {
+      background-color: variables.$primary-color;
+      border: 1px solid variables.$primary-color;
+
+      span {
+        color: variables.$only-white;
+      }
+    }
+  }
+}
+
+.beon-showcase__item-image {
+  width: 218px;
+  height: 309px;
+  margin: 21px;
+}
+
+.beon-showcase__item-title {
+  @include mixins.default-font(600, 14px, 17px);
+  position: absolute;
+  top: 347px;
+  left: 20px;
+  width: 219px;
+  text-align: center;
+  color: variables.$text-color;
+}
+
+.beon-showcase__item-price--from {
+  @include mixins.default-font(400, 12px, 14px);
+  position: absolute;
+  width: 215px;
+  top: 389px;
+  left: 20px;
+  text-decoration-line: line-through;
+  text-decoration-color: variables.$old-price-color;
+
+  span {
+    color: variables.$old-price-color;
+  }
+}
+
+.beon-showcase {
+  .beon-showcase__item-price--to .beon-showcase__price,
+  .beon-showcase__item-price-box--simple .beon-showcase__price {
+    @include mixins.default-font(700, 22px, 16px);
+    position: absolute;
+    top: 410px;
+    left: 20px;
+    width: 218px;
+    height: 48px;
+    margin-top: 5px;
+    color: variables.$primary-color;
+
+    span {
+      color: variables.$primary-color;
+    }
+  }
+
+  .beon-showcase__item-badge {
+    @include mixins.default-font(0, 18px, 18px);
+    background-color: variables.$primary-color;
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    left: 197px;
+    top: 16px;
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .beon-showcase__item-discount {
+    font-weight: 700;
+  }
+
+  .beon-showcase__item-badge--off-value {
+    display: none;
+  }
+}
+
+.beon-showcase__item-installments {
+  position: absolute;
+  top: 440px;
+  left: 20px;
+
+  strong {
+    font-weight: 100;
+  }
+
+  .beon-interaction__installmentPrice {
+    color: variables.$primary-color;
+  }
+}
+
+.beon-showcase__item-price--to .prefix,
+.beon-showcase__item-avista {
+  display: none;
+}
+
+.beon-button {
+  @include mixins.default-font(700, 12px, 14px);
+  position: absolute;
+  bottom: 0;
+  background-color: variables.$secondary-color;
+  letter-spacing: 0.08em;
+  text-align: center;
+  width: 100%;
+
+  span {
+    color: variables.$primary-color;
+  }
+}
+
+@media (max-width: 480px) {
+  .beon-showcase__item {
+    left: -6px;
+    border: 1px solid variables.$primary-color;
+  }
+
+  .beon-button {
+    background-color: variables.$primary-color;
+
+    span {
+      color: variables.$secondary-color;
+    }
+  }
+}
