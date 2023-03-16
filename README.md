@@ -17,7 +17,7 @@ Foi necessário criar o layout para desktop e para mobile, especificamente para 
 ## Como rodar o projeto na sua máquina
 
 
-### 1. Navegue até o local onde deseja clonar o repositório e utilize o git clone:
+### 1. Pelo terminal, navegue até o local onde deseja clonar o repositório e utilize o git clone:
 ```
 git clone git@github.com:Helena-Rodrigues-Figueiredo/bn-teste-customizacao-componentes-helena.git
 ```
@@ -28,6 +28,10 @@ cd bn-teste-customizacao-componentes-helena
 ```
 
 ### 3. Pelo VSCode, você pode utilizar a extensão Live Share para visualizar a aplicação;
+
+```
+code .
+```
 <br>
 
 ⚠️ Este repositório já contém tanto os arquivos SASS quanto o arquivo CSS compilado. Caso não queira realizar nenhuma alteração no SASS, não será necessário seguir os próximos passos.
