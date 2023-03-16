@@ -4,6 +4,10 @@ Este repositório contém o resultado do teste técnico realizado para a vaga de
 
 Foi necessário criar o layout para desktop e para mobile, especificamente para o modelo iPhone X.
 
+
+![Captura de tela de 2023-03-16 13-32-31](https://user-images.githubusercontent.com/99517204/225688861-e7e28f2d-6e55-47a4-83f3-b4d9a2d743e8.png)
+
+
 ## Tecnologias utilizadas
 
 * SASS
